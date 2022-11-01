@@ -7,7 +7,7 @@ pointer, which points at the space in the block after the last object that
 was written. When the next object is written, the bump pointer is incremented
 to point to the space after _that_ object [^1].
 
-We will used a fixed power-of-two block size. The benefit of this is that
+We used a fixed power-of-two block size. The benefit of this is that
 given a pointer to an object, by zeroing the bits of the pointer that represent
 the block size, the result points to the beginning of the block. This will
 be useful later when implementing garbage collection.
